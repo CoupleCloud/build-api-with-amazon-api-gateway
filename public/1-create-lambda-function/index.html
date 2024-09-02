@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50269&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.133.1">
@@ -12,21 +12,21 @@
     <title>CREATING A LAMBDA FUNCTION :: Deploy ShareNote Application on Auto Scaling Group</title>
 
     
-    <link href="/css/nucleus.css?1725317603" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725317603" rel="stylesheet">
-    <link href="/css/hybrid.css?1725317603" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725317603" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725317603" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725317603" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725317603" rel="stylesheet">
-    <link href="/css/theme.css?1725317603" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725317603" rel="stylesheet">
+    <link href="/css/nucleus.css?1725317944" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725317944" rel="stylesheet">
+    <link href="/css/hybrid.css?1725317944" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725317944" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725317944" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725317944" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725317944" rel="stylesheet">
+    <link href="/css/theme.css?1725317944" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725317944" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725317603" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725317944" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725317603"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725317944"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725317603"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725317603"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725317944"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725317944"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/";
+        var baseurl = "\/\/localhost:50269\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725317603"></script>
+<script type="text/javascript" src="/js/search.js?1725317944"></script>
 
     
   </div>
@@ -269,7 +269,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/1-create-lambda-function/" selected>English</option>
+                      <option id="en" value="//localhost:50269/1-create-lambda-function/" selected>English</option>
                     
                   
               
@@ -283,7 +283,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/1-create-lambda-function/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:50269/vi/1-create-lambda-function/">Tiếng Việt</option>
                     
                   
               
@@ -428,11 +428,11 @@
 <ol>
 <li><strong>Log in to the AWS Management Console</strong>: Go to the <a href="https://aws.amazon.com/console/">AWS Management Console</a> and sign in with your credentials.</li>
 </ol>
-<p><img alt="Image" src="../../images/1-create-lambda-function/0_overview.png?width=300pc"></p>
+<p><img alt="Image" src="../images/0_overview.png"></p>
 <ol start="2">
 <li><strong>Navigate to the Lambda Service</strong>: In the AWS Management Console, search for and select <strong>Lambda</strong> from the list of services.</li>
 </ol>
-<p><img alt="Image" src="../../images/1-create-lambda-function/1_lambda.png?width=300pc"></p>
+<p><img alt="Image" src="../images/1/1_lambda.png"></p>
 <ol start="3">
 <li><strong>Create a New Lambda Function</strong>:
 <ul>
@@ -444,15 +444,16 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Image" src="../../images/1-create-lambda-function/1_create_function.png?width=300pc"></p>
+<p><img alt="Image" src="../images/1/1_create_function.png"></p>
 <ol start="4">
-<li>
-<p><strong>Write or Upload Your Code</strong>:</p>
+<li><strong>Write or Upload Your Code</strong>:
 <ul>
 <li>In the <strong>Function code</strong> section, you should see the code editor where you can edit your Lambda function&rsquo;s code.</li>
 <li>If the <strong>index.mjs</strong> tab is not visible in the code editor, select it from the file explorer. This file contains the code for your Lambda function.</li>
 </ul>
-<p><img alt="Image" src="../../images/1-create-lambda-function/1_index.mjs.png?width=300pc"></p>
+</li>
+</ol>
+<p><img alt="Image" src="../images/1/1_index.mjs.png"></p>
 <ul>
 <li>Paste the following code into the <strong>index.mjs</strong> tab, replacing any existing code:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">handler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">event</span>, <span style="color:#a6e22e">context</span>) =&gt; {
@@ -476,7 +477,7 @@
 </span></span></code></pre></div></li>
 <li>Click <strong>Deploy</strong> to update your function&rsquo;s code. Once Lambda has successfully deployed the changes, you will see a banner confirming that your function has been updated.</li>
 </ul>
-</li>
+<ol start="5">
 <li>
 <p><strong>Configure Function Settings</strong>:</p>
 <ul>
@@ -705,19 +706,19 @@ REPORT RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20 Duration: 17.77 ms Billed
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725317603"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725317603"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725317603"></script>
-    <script src="/js/jquery.sticky.js?1725317603"></script>
-    <script src="/js/featherlight.min.js?1725317603"></script>
-    <script src="/js/highlight.pack.js?1725317603"></script>
+    <script src="/js/clipboard.min.js?1725317944"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725317944"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725317944"></script>
+    <script src="/js/jquery.sticky.js?1725317944"></script>
+    <script src="/js/featherlight.min.js?1725317944"></script>
+    <script src="/js/highlight.pack.js?1725317944"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725317603"></script>
-    <script src="/js/learn.js?1725317603"></script>
-    <script src="/js/hugo-learn.js?1725317603"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725317944"></script>
+    <script src="/js/learn.js?1725317944"></script>
+    <script src="/js/hugo-learn.js?1725317944"></script>
 
-    <link href="/mermaid/mermaid.css?1725317603" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725317603"></script>
+    <link href="/mermaid/mermaid.css?1725317944" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725317944"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

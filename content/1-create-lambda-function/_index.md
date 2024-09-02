@@ -17,11 +17,11 @@ In this section, you will learn how to create an **AWS Lambda function**. AWS La
 
 1. **Log in to the AWS Management Console**: Go to the [AWS Management Console](https://aws.amazon.com/console/) and sign in with your credentials.
 
-![Image](../../images/1-create-lambda-function/0_overview.png?width=300pc)
+![Image](../images/0_overview.png)
 
 2. **Navigate to the Lambda Service**: In the AWS Management Console, search for and select **Lambda** from the list of services.
 
-![Image](../../images/1-create-lambda-function/1_lambda.png?width=300pc)
+![Image](../images/1/1_lambda.png)
 
 3. **Create a New Lambda Function**:
    - Click the **Create function** button.
@@ -30,13 +30,13 @@ In this section, you will learn how to create an **AWS Lambda function**. AWS La
    - Select a runtime for your function from the **Runtime** dropdown. You can choose from various languages such as Node.js, Python, Java, and more.
    - Under **Permissions**, choose **Create a new role with basic Lambda permissions** to allow Lambda to execute your code and write logs to CloudWatch.
 
-![Image](../../images/1-create-lambda-function/1_create_function.png?width=300pc)
+![Image](../images/1/1_create_function.png)
 
 4. **Write or Upload Your Code**:
    - In the **Function code** section, you should see the code editor where you can edit your Lambda function's code.
    - If the **index.mjs** tab is not visible in the code editor, select it from the file explorer. This file contains the code for your Lambda function.
 
-   ![Image](../../images/1-create-lambda-function/1_index.mjs.png?width=300pc)
+![Image](../images/1/1_index.mjs.png)
 
    - Paste the following code into the **index.mjs** tab, replacing any existing code:
      ```javascript
