@@ -6,7 +6,6 @@ chapter = false
 +++
 
 # BUILD REST API WITH AWS API  GATEWAY
-![Image](../images/0_overview.png)
 
 #### Overview
 In this tutorial, you will learn how to create a REST API using **AWS API Gateway** and **AWS Lambda**. We will walk you through setting up a basic API that integrates with a Lambda function, demonstrating how these AWS services work together to build scalable and serverless applications. This guide is designed for beginners in AWS cloud computing and covers the essential steps and concepts involved.
