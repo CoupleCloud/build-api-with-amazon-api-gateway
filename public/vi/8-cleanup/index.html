@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
+<html lang="vi" class="js csstransforms3d">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CREATING A LAMBDA FUNCTION :: Deploy ShareNote Application on Auto Scaling Group</title>
+    <title>Dọn dẹp tài nguyên   :: Triển khai Ứng dụng ShareNote với Auto Scaling Group</title>
 
     
     <link href="/css/nucleus.css?1725317603" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/1-create-lambda-function/">
+  <body class="" data-url="/vi/8-cleanup/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -61,7 +61,7 @@
 <script type="text/javascript" src="/js/auto-complete.js?1725317603"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
 <script type="text/javascript" src="/js/search.js?1725317603"></script>
@@ -82,143 +82,143 @@
  
   
     
-    <li data-nav-id="/1-create-lambda-function/" title="CREATING A LAMBDA FUNCTION" class="dd-item 
+    <li data-nav-id="/vi/1-create-lambda-function/" title="Tạo mới tài khoản AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-create-lambda-function/">
+          <b>1. </b>Tạo mới tài khoản AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-setup-api-gateway/" title="MFA cho Tài khoản AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-setup-api-gateway/">
+          <b>2. </b>MFA cho Tài khoản AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-deploy-api/" title="Tạo Admin Group và Admin User" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-deploy-api/">
+          <b>3. </b>Tạo Admin Group và Admin User
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-test-api/" title="Hỗ trợ Xác thực Tài khoản" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-test-api/">
+          <b>4. </b>Hỗ trợ Xác thực Tài khoản
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-monitor-api/" title="Hỗ trợ Xác thực Tài khoản" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-monitor-api/">
+          <b>4. </b>Hỗ trợ Xác thực Tài khoản
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/8-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
         
         active
         
         ">
-      <a href="/1-create-lambda-function/">
-          <b>1. </b>CREATING A LAMBDA FUNCTION
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-setup-api-gateway/" title="SETTING UP API GATEWAY" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-setup-api-gateway/">
-          <b>2. </b>SETTING UP API GATEWAY
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-deploy-api/" title="DEPLOYING THE API" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-deploy-api/">
-          <b>3. </b>DEPLOYING THE API
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-test-api/" title="TESTING THE API" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-test-api/">
-          <b>4. </b>TESTING THE API
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-monitor-api/" title="Monitoring and Managing Your API" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-monitor-api/">
-          <b>5. </b>Monitoring and Managing Your API
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/8-cleanup/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/8-cleanup/">
-           <b> 8. </b> Clean up resources
+      <a href="/vi/8-cleanup/">
+          <b>6. </b>Dọn dẹp tài nguyên  
           
             <i class="fas fa-check read-icon"></i>
           
@@ -244,7 +244,7 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
               </li>
           
         </ul>
@@ -269,7 +269,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/1-create-lambda-function/" selected>English</option>
+                      <option id="en" value="//localhost:1313/8-cleanup/">English</option>
                     
                   
               
@@ -283,7 +283,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/1-create-lambda-function/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/8-cleanup/" selected>Tiếng Việt</option>
                     
                   
               
@@ -376,7 +376,7 @@
             
           
           
-            <a href='/'>Setting up an AWS account</a> > CREATING A LAMBDA FUNCTION
+            <a href='/vi/'>Thiết lập Tài Khoản AWS</a> > Dọn dẹp tài nguyên  
           
         
           
@@ -411,7 +411,7 @@
           
             <h1>
               
-              CREATING A LAMBDA FUNCTION
+              Dọn dẹp tài nguyên  
             </h1>
           
 
@@ -419,135 +419,99 @@
 
 
 
-	<h4 id="creating-a-lambda-function">CREATING A LAMBDA FUNCTION</h4>
-<h4 id="overview">Overview</h4>
-<p>In this section, you will learn how to create an <strong>AWS Lambda function</strong>. AWS Lambda allows you to run code in response to events without provisioning or managing servers. This step is crucial as it will enable you to process the requests that come from your API Gateway.</p>
-<h4 id="what-is-aws-lambda">What is AWS Lambda?</h4>
-<p><strong>AWS Lambda</strong> is a serverless computing service provided by AWS that executes your code only when needed and scales automatically. It eliminates the need to manage infrastructure, allowing you to focus solely on your code. Lambda functions can be triggered by various AWS services, such as API Gateway, S3, DynamoDB, and more.</p>
-<h4 id="creating-a-lambda-function-1">Creating a Lambda Function</h4>
+	<p>Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này.</p>
+<h4 id="xóa-ec2-instance">Xóa EC2 instance</h4>
 <ol>
-<li><strong>Log in to the AWS Management Console</strong>: Go to the <a href="https://aws.amazon.com/console/">AWS Management Console</a> and sign in with your credentials.</li>
+<li>Truy cập <a href="https://console.aws.amazon.com/ec2/v2/home">giao diện quản trị dịch vụ EC2</a></li>
 </ol>
-<p><img alt="Image" src="../../images/1-create-lambda-function/0_overview.png?width=300pc"></p>
+<ul>
+<li>Click <strong>Instances</strong>.</li>
+<li>Click chọn cả 2 instance <strong>Public Linux Instance</strong> và <strong>Private Windows Instance</strong>.</li>
+<li>Click <strong>Instance state</strong>.</li>
+<li>Click <strong>Terminate instance</strong>, sau đó click <strong>Terminate</strong> để xác nhận.</li>
+</ul>
 <ol start="2">
-<li><strong>Navigate to the Lambda Service</strong>: In the AWS Management Console, search for and select <strong>Lambda</strong> from the list of services.</li>
+<li>Truy cập <a href="https://console.aws.amazon.com/iamv2/home#/home">giao diện quản trị dịch vụ IAM</a></li>
 </ol>
-<p><img alt="Image" src="../../images/1-create-lambda-function/1_lambda.png?width=300pc"></p>
+<ul>
+<li>Click <strong>Roles</strong>.</li>
+<li>Tại ô tìm kiếm , điền <strong>SSM</strong>.</li>
+<li>Click chọn <strong>SSM-Role</strong>.</li>
+<li>Click <strong>Delete</strong>, sau đó điền tên role <strong>SSM-Role</strong> và click <strong>Delete</strong> để xóa role.</li>
+</ul>
+<p><img alt="Clean" src="/images/6.clean/001-clean.png"></p>
 <ol start="3">
-<li><strong>Create a New Lambda Function</strong>:
-<ul>
-<li>Click the <strong>Create function</strong> button.</li>
-<li>Choose <strong>Author from scratch</strong>. This option lets you start with a blank function.</li>
-<li>Enter a name for your function in the <strong>Function name</strong> field. For example, <code>MyApiLambdaFunction</code>.</li>
-<li>Select a runtime for your function from the <strong>Runtime</strong> dropdown. You can choose from various languages such as Node.js, Python, Java, and more.</li>
-<li>Under <strong>Permissions</strong>, choose <strong>Create a new role with basic Lambda permissions</strong> to allow Lambda to execute your code and write logs to CloudWatch.</li>
-</ul>
-</li>
+<li>Click <strong>Users</strong>.</li>
 </ol>
-<p><img alt="Image" src="../../images/1-create-lambda-function/1_create_function.png?width=300pc"></p>
+<ul>
+<li>Click chọn user <strong>Portfwd</strong>.</li>
+<li>Click <strong>Delete</strong>, sau đó điền tên user <strong>Portfwd</strong> và click <strong>Delete</strong> để xóa user.</li>
+</ul>
+<h4 id="xóa-s3-bucket">Xóa S3 bucket</h4>
+<ol>
+<li>Truy cập <a href="https://console.aws.amazon.com/systems-manager/session-manager">giao diện quản trị dịch vụ System Manager - Session Manager</a>.</li>
+</ol>
+<ul>
+<li>Click tab <strong>Preferences</strong>.</li>
+<li>Click <strong>Edit</strong>.</li>
+<li>Kéo chuột xuống dưới.</li>
+<li>Tại mục <strong>S3 logging</strong>.</li>
+<li>Bỏ chọn <strong>Enable</strong> để tắt tính năng logging.</li>
+<li>Kéo chuột xuống dưới.</li>
+<li>Click <strong>Save</strong>.</li>
+</ul>
+<ol start="2">
+<li>Truy cập <a href="https://s3.console.aws.amazon.com/s3/home">giao diện quản trị dịch vụ S3</a></li>
+</ol>
+<ul>
+<li>Click chọn S3 bucket chúng ta đã tạo cho bài thực hành. ( Ví dụ : lab-fcj-bucket-0001 )</li>
+<li>Click <strong>Empty</strong>.</li>
+<li>Điền <strong>permanently delete</strong>, sau đó click <strong>Empty</strong> để tiến hành xóa object trong bucket.</li>
+<li>Click <strong>Exit</strong>.</li>
+</ul>
+<ol start="3">
+<li>Sau khi xóa hết object trong bucket, click <strong>Delete</strong></li>
+</ol>
+<p><img alt="Clean" src="/images/6.clean/002-clean.png"></p>
 <ol start="4">
-<li>
-<p><strong>Write or Upload Your Code</strong>:</p>
-<ul>
-<li>In the <strong>Function code</strong> section, you should see the code editor where you can edit your Lambda function&rsquo;s code.</li>
-<li>If the <strong>index.mjs</strong> tab is not visible in the code editor, select it from the file explorer. This file contains the code for your Lambda function.</li>
-</ul>
-<p><img alt="Image" src="../../images/1-create-lambda-function/1_index.mjs.png?width=300pc"></p>
-<ul>
-<li>Paste the following code into the <strong>index.mjs</strong> tab, replacing any existing code:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">handler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">event</span>, <span style="color:#a6e22e">context</span>) =&gt; {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">length</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">width</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">area</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calculateArea</span>(<span style="color:#a6e22e">length</span>, <span style="color:#a6e22e">width</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`The area is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">area</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;CloudWatch log group: &#39;</span>, <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">logGroupName</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;area&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">area</span>,
-</span></span><span style="display:flex;"><span>  };
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">data</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calculateArea</span>(<span style="color:#a6e22e">length</span>, <span style="color:#a6e22e">width</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">length</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">width</span>;
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div></li>
-<li>Click <strong>Deploy</strong> to update your function&rsquo;s code. Once Lambda has successfully deployed the changes, you will see a banner confirming that your function has been updated.</li>
-</ul>
-</li>
-<li>
-<p><strong>Configure Function Settings</strong>:</p>
-<ul>
-<li>Set up your function’s <strong>Handler</strong> (for example, <code>index.handler</code> for Node.js).</li>
-<li>Adjust <strong>Memory</strong> and <strong>Timeout</strong> settings as needed, depending on the requirements of your function.</li>
-</ul>
-</li>
-<li>
-<p><strong>Test Your Lambda Function</strong>:</p>
-<ul>
-<li>
-<p>To invoke your Lambda function using the console, you first need to create a test event:</p>
+<li>Điền tên S3 bucket, sau đó click <strong>Delete bucket</strong> để tiến hành xóa S3 bucket.</li>
+</ol>
+<p><img alt="Clean" src="/images/6.clean/003-clean.png"></p>
+<h4 id="xóa-các-vpc-endpoint">Xóa các VPC Endpoint</h4>
 <ol>
-<li>In the <strong>Code source</strong> pane of the Lambda console, click <strong>Test</strong>.</li>
-<li>Select <strong>Create new event</strong>.</li>
-<li>For <strong>Event name</strong>, enter <code>myTestEvent</code>.</li>
-<li>In the <strong>Event JSON</strong> panel, replace the default values with the following:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;length&#34;</span>: <span style="color:#ae81ff">6</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;width&#34;</span>: <span style="color:#ae81ff">7</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></li>
-<li>Click <strong>Save</strong> to create the test event.</li>
+<li>Truy cập vào <a href="https://console.aws.amazon.com/vpc/home">giao diện quản trị dịch vụ VPC</a></li>
 </ol>
-</li>
-<li>
-<p>To run the test and view the results:</p>
-<ol>
-<li>In the <strong>Code source</strong> pane, click <strong>Test</strong> again.</li>
-<li>After the function executes, you will see the response and logs displayed in the <strong>Execution results</strong> tab. The expected results should be similar to:
-<pre tabindex="0"><code>Test Event Name: myTestEvent
-
-Response:
-&#34;{\&#34;area\&#34;:42}&#34;
-
-Function Logs:
-START RequestId: 5c012b0a-18f7-4805-b2f6-40912935034a Version: $LATEST
-2023-08-31T23:39:45.313Z 5c012b0a-18f7-4805-b2f6-40912935034a INFO The area is 42
-2023-08-31T23:39:45.331Z 5c012b0a-18f7-4805-b2f6-40912935034a INFO CloudWatch log group: /aws/lambda/myLambdaFunction
-END RequestId: 5c012b0a-18f7-4805-b2f6-40912935034a
-REPORT RequestId: 5c012b0a-18f7-4805-b2f6-40912935034a Duration: 20.67 ms Billed Duration: 21 ms Memory Size: 128 MB Max Memory Used: 66 MB Init Duration: 163.87 ms
-</code></pre></li>
-</ol>
-</li>
-<li>
-<p>To view the invocation records in <strong>CloudWatch Logs</strong>:</p>
-<ol>
-<li>Open the <strong>Log groups</strong> page of the CloudWatch console.</li>
-<li>Select the log group for your function, which is <code>/aws/lambda/myLambdaFunction</code>.</li>
-<li>In the <strong>Log streams</strong> tab, choose the log stream corresponding to your function&rsquo;s invocation.</li>
-<li>You should see output similar to:
-<pre tabindex="0"><code>INIT_START Runtime Version: nodejs:20.v13 Runtime Version ARN: arn:aws:lambda:us-west-2::runtime:e3aaabf6b92ef8755eaae2f4bfdcb7eb8c4536a5e044900570a42bdba7b869d9
-START RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20 Version: $LATEST
-2023-08-23T22:04:15.809Z 5c012b0a-18f7-4805-b2f6-40912935034a INFO The area is 42
-2023-08-23T22:04:15.810Z aba6c0fc-cf99-49d7-a77d-26d805dacd20 INFO CloudWatch log group: /aws/lambda/myLambdaFunction
-END RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20
-REPORT RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20 Duration: 17.77 ms Billed Duration: 18 ms Memory Size: 128 MB Max Memory Used: 67 MB Init Duration: 178.85 ms
-</code></pre></li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<p>In this process, you create a test event, execute the function, and verify the output both in the Lambda console and CloudWatch Logs.</p>
-<ol start="7">
-<li><strong>Save Your Function</strong>:
 <ul>
-<li>Click <strong>Deploy</strong> to save your changes.</li>
+<li>Click <strong>Endpoints</strong>.</li>
+<li>Chọn 4 endpoints chúng ta đã tạo cho bài thực hành bao gồm <strong>SSM</strong>, <strong>SSMMESSAGES</strong>, <strong>EC2MESSAGES</strong>, <strong>S3GW</strong>.</li>
+<li>Click <strong>Actions</strong>.</li>
+<li>Click <strong>Delete VPC endpoints</strong>.</li>
 </ul>
-</li>
+<p><img alt="Clean" src="/images/6.clean/004-clean.png"></p>
+<ol start="2">
+<li>Tại ô confirm , điền <strong>delete</strong>.</li>
 </ol>
+<ul>
+<li>Click <strong>Delete</strong> để tiến hành xóa các endpoints.</li>
+</ul>
+<ol start="3">
+<li>Click biểu tượng refresh, kiểm tra tất cả các endpoints đã bị xóa trước khi làm bước tiếp theo.</li>
+</ol>
+<p><img alt="Clean" src="/images/6.clean/005-clean.png"></p>
+<h4 id="xóa-vpc">Xóa VPC</h4>
+<ol>
+<li>Truy cập vào <a href="https://console.aws.amazon.com/vpc/home">giao diện quản trị dịch vụ VPC</a></li>
+</ol>
+<ul>
+<li>Click <strong>Your VPCs</strong>.</li>
+<li>Click chọn <strong>Lab VPC</strong>.</li>
+<li>Click <strong>Actions</strong>.</li>
+<li>Click <strong>Delete VPC</strong>.</li>
+</ul>
+<ol start="2">
+<li>Tại ô confirm, điền <strong>delete</strong> để xác nhận, click <strong>Delete</strong> để thực hiện xóa <strong>Lab VPC</strong> và các tài nguyên liên quan.</li>
+</ol>
+<p><img alt="Clean" src="/images/6.clean/006-clean.png"></p>
 
 
 
@@ -588,23 +552,6 @@ REPORT RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20 Duration: 17.77 ms Billed
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -671,6 +618,23 @@ REPORT RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20 Duration: 17.77 ms Billed
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -692,10 +656,10 @@ REPORT RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20 Duration: 17.77 ms Billed
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Setting up an AWS account"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/5-monitor-api/" title="Hỗ trợ Xác thực Tài khoản"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-setup-api-gateway/" title="SETTING UP API GATEWAY" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-create-lambda-function/" title="Tạo mới tài khoản AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
