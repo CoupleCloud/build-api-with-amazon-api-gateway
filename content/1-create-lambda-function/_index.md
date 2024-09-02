@@ -17,6 +17,8 @@ In this section, you will learn how to create an **AWS Lambda function**. AWS La
 
 1. **Log in to the AWS Management Console**: Go to the [AWS Management Console](https://aws.amazon.com/console/) and sign in with your credentials.
 
+![Image](/images/1/0_overview.png?width=300pc)
+
 2. **Navigate to the Lambda Service**: In the AWS Management Console, search for and select **Lambda** from the list of services.
 
 3. **Create a New Lambda Function**:
