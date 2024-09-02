@@ -27,34 +27,36 @@ Before setting up API Gateway, ensure you have the following:
 
 1. **Log in to the AWS Management Console**:
    - Navigate to the [AWS Management Console](https://aws.amazon.com/console/) and log in with your credentials.
-
-2. **Navigate to API Gateway**:
    - In the AWS Management Console, search for and select **API Gateway** from the list of services.
+![Image](../images/2/01_console.png)
 
-3. **Create a New API**:
+1. **Create a New API**:
    - Click on the **Create API** button.
    - Select **REST API** to use the advanced features.
+![Image](../images/2/02_create_api.png)
 
-4. **Define the Resource**:
+2. **Define the Resource**:
    - Click on **Actions** and choose **Create Resource**.
    - Provide a name for the resource and click **Create Resource**.
+![Image](../images/2/03_action.png)
 
-5. **Create a Method**:
+3. **Create a Method**:
    - Select the newly created resource.
    - Click on **Actions** and choose **Create Method**.
    - Choose the HTTP verb (e.g., GET, POST, PUT, DELETE) and click on the checkmark to create the method.
+![Image](../images/2/04_method.png)
 
-6. **Integrate with Lambda Function**:
+4. **Integrate with Lambda Function**:
    - In the **Integration type** section, select **Lambda Function**.
    - Enter the name of the Lambda function you want to use.
    - Click **Save** to link the Lambda function with the API method.
 
-7. **Deploy the API**:
+5. **Deploy the API**:
    - Click on **Actions** and select **Deploy API**.
    - Choose or create a new deployment stage (e.g., `prod` or `test`).
    - Click **Deploy** to make your API available.
 
-8. **Code Example**:
+6. **Code Example**:
    - Here is a sample Lambda function code to handle different HTTP methods:
 
      ```python
@@ -125,7 +127,7 @@ Before setting up API Gateway, ensure you have the following:
              return response
      ```
 
-9. **Testing with Postman**:
+7. **Testing with Postman**:
    - Use the generated API endpoint to test your API.
    - Open Postman and send HTTP requests to the invoke URL to verify that the API responds correctly.
    - For GET requests, no request body is needed. For POST, PUT, and DELETE, include appropriate request bodies.

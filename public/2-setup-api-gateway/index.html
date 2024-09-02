@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50269&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.133.1">
@@ -12,21 +12,21 @@
     <title>SETTING UP API GATEWAY :: Deploy ShareNote Application on Auto Scaling Group</title>
 
     
-    <link href="/css/nucleus.css?1725317944" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725317944" rel="stylesheet">
-    <link href="/css/hybrid.css?1725317944" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725317944" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725317944" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725317944" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725317944" rel="stylesheet">
-    <link href="/css/theme.css?1725317944" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725317944" rel="stylesheet">
+    <link href="/css/nucleus.css?1725319006" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725319006" rel="stylesheet">
+    <link href="/css/hybrid.css?1725319006" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725319006" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725319006" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725319006" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725319006" rel="stylesheet">
+    <link href="/css/theme.css?1725319006" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725319006" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725317944" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725319006" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725317944"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725319006"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725317944"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725317944"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725319006"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725319006"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:50269\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725317944"></script>
+<script type="text/javascript" src="/js/search.js?1725319006"></script>
 
     
   </div>
@@ -269,7 +269,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:50269/2-setup-api-gateway/" selected>English</option>
+                      <option id="en" value="//localhost:1313/2-setup-api-gateway/" selected>English</option>
                     
                   
               
@@ -283,7 +283,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:50269/vi/2-setup-api-gateway/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/2-setup-api-gateway/">Tiếng Việt</option>
                     
                   
               
@@ -446,26 +446,24 @@
 <p><strong>Log in to the AWS Management Console</strong>:</p>
 <ul>
 <li>Navigate to the <a href="https://aws.amazon.com/console/">AWS Management Console</a> and log in with your credentials.</li>
-</ul>
-</li>
-<li>
-<p><strong>Navigate to API Gateway</strong>:</p>
-<ul>
-<li>In the AWS Management Console, search for and select <strong>API Gateway</strong> from the list of services.</li>
+<li>In the AWS Management Console, search for and select <strong>API Gateway</strong> from the list of services.
+<img alt="Image" src="../images/2/01_console.png"></li>
 </ul>
 </li>
 <li>
 <p><strong>Create a New API</strong>:</p>
 <ul>
 <li>Click on the <strong>Create API</strong> button.</li>
-<li>Select <strong>REST API</strong> to use the advanced features.</li>
+<li>Select <strong>REST API</strong> to use the advanced features.
+<img alt="Image" src="../images/2/02_create_api.png"></li>
 </ul>
 </li>
 <li>
 <p><strong>Define the Resource</strong>:</p>
 <ul>
 <li>Click on <strong>Actions</strong> and choose <strong>Create Resource</strong>.</li>
-<li>Provide a name for the resource and click <strong>Create Resource</strong>.</li>
+<li>Provide a name for the resource and click <strong>Create Resource</strong>.
+<img alt="Image" src="../images/2/03_action.png"></li>
 </ul>
 </li>
 <li>
@@ -473,7 +471,8 @@
 <ul>
 <li>Select the newly created resource.</li>
 <li>Click on <strong>Actions</strong> and choose <strong>Create Method</strong>.</li>
-<li>Choose the HTTP verb (e.g., GET, POST, PUT, DELETE) and click on the checkmark to create the method.</li>
+<li>Choose the HTTP verb (e.g., GET, POST, PUT, DELETE) and click on the checkmark to create the method.
+<img alt="Image" src="../images/2/04_method.png"></li>
 </ul>
 </li>
 <li>
@@ -736,19 +735,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725317944"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725317944"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725317944"></script>
-    <script src="/js/jquery.sticky.js?1725317944"></script>
-    <script src="/js/featherlight.min.js?1725317944"></script>
-    <script src="/js/highlight.pack.js?1725317944"></script>
+    <script src="/js/clipboard.min.js?1725319006"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725319006"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725319006"></script>
+    <script src="/js/jquery.sticky.js?1725319006"></script>
+    <script src="/js/featherlight.min.js?1725319006"></script>
+    <script src="/js/highlight.pack.js?1725319006"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725317944"></script>
-    <script src="/js/learn.js?1725317944"></script>
-    <script src="/js/hugo-learn.js?1725317944"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725319006"></script>
+    <script src="/js/learn.js?1725319006"></script>
+    <script src="/js/hugo-learn.js?1725319006"></script>
 
-    <link href="/mermaid/mermaid.css?1725317944" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725317944"></script>
+    <link href="/mermaid/mermaid.css?1725319006" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725319006"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

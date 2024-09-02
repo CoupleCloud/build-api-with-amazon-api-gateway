@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50269&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.133.1">
@@ -12,21 +12,21 @@
     <title>Clean up resources :: Deploy ShareNote Application on Auto Scaling Group</title>
 
     
-    <link href="/css/nucleus.css?1725317944" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725317944" rel="stylesheet">
-    <link href="/css/hybrid.css?1725317944" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725317944" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725317944" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725317944" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725317944" rel="stylesheet">
-    <link href="/css/theme.css?1725317944" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725317944" rel="stylesheet">
+    <link href="/css/nucleus.css?1725319006" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725319006" rel="stylesheet">
+    <link href="/css/hybrid.css?1725319006" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725319006" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725319006" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725319006" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725319006" rel="stylesheet">
+    <link href="/css/theme.css?1725319006" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725319006" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725317944" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725319006" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725317944"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725319006"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725317944"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725317944"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725319006"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725319006"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:50269\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725317944"></script>
+<script type="text/javascript" src="/js/search.js?1725319006"></script>
 
     
   </div>
@@ -269,7 +269,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:50269/8-cleanup/" selected>English</option>
+                      <option id="en" value="//localhost:1313/8-cleanup/" selected>English</option>
                     
                   
               
@@ -283,7 +283,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:50269/vi/8-cleanup/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/8-cleanup/">Tiếng Việt</option>
                     
                   
               
@@ -429,16 +429,16 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Crawler" src="../images/8.clean/01-delete_crawler.png"></p>
+<p><img alt="Crawler" src="../images/8/01-delete_crawler.png"></p>
 <ol start="2">
 <li>Navigate to <strong>Databases</strong>. Tick the <strong>transactions</strong> database, then click <strong>Delete</strong>.</li>
 </ol>
-<p><img alt="Database" src="../images/8.clean/02-delete_db.png"></p>
+<p><img alt="Database" src="../images/8/02-delete_db.png"></p>
 <h4 id="delete-glue-etl">Delete Glue ETL</h4>
 <ol>
 <li>Navigate to <strong>ETL Jobs</strong>. Tick <strong>DE ETL job</strong>, then click <strong>Actions</strong>, choose <strong>Delete job(s)</strong>.</li>
 </ol>
-<p><img alt="GlueETL" src="../images/8.clean/03-delete_etl_job.png"></p>
+<p><img alt="GlueETL" src="../images/8/03-delete_etl_job.png"></p>
 <h4 id="delete-lambda-function">Delete Lambda function</h4>
 <ol>
 <li>
@@ -467,8 +467,8 @@
 <p>Tick like this image, then click <strong>Delete</strong>.</p>
 </li>
 </ol>
-<p><img alt="RDS" src="../images/8.clean/04-delete_rds.png"></p>
-<ol start="4">
+<p><img alt="RDS" src="../images/8/04-delete_rds.png"></p>
+<ol>
 <li>Navigate to <strong>Subnet groups</strong>. Tick <strong>de-mysql-instance-subnet-group</strong>, then click <strong>Delete</strong>.</li>
 </ol>
 <h4 id="delete-ec2-instance">Delete EC2 Instance</h4>
@@ -477,7 +477,7 @@
 <li>Click <strong>Instances</strong>.</li>
 <li>Select our instance, click <strong>Instance state</strong>, then click <strong>Terminate (delete) instance</strong>.</li>
 </ul>
-<p><img alt="EC2" src="../images/8.clean/05-delete_ec2_instance.png"></p>
+<p><img alt="EC2" src="../images/8/05-delete_ec2_instance.png"></p>
 <h4 id="delete-vpc">Delete VPC</h4>
 <ol>
 <li>
@@ -496,7 +496,7 @@
 <p>Navigate to <strong>Roles</strong>. Delete these roles we created.</p>
 </li>
 </ol>
-<p><img alt="IAM" src="../images/8.clean/06-delete_iam.png"></p>
+<p><img alt="IAM" src="../images/8/06-delete_iam.png"></p>
 
 
 
@@ -654,19 +654,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725317944"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725317944"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725317944"></script>
-    <script src="/js/jquery.sticky.js?1725317944"></script>
-    <script src="/js/featherlight.min.js?1725317944"></script>
-    <script src="/js/highlight.pack.js?1725317944"></script>
+    <script src="/js/clipboard.min.js?1725319006"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725319006"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725319006"></script>
+    <script src="/js/jquery.sticky.js?1725319006"></script>
+    <script src="/js/featherlight.min.js?1725319006"></script>
+    <script src="/js/highlight.pack.js?1725319006"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725317944"></script>
-    <script src="/js/learn.js?1725317944"></script>
-    <script src="/js/hugo-learn.js?1725317944"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725319006"></script>
+    <script src="/js/learn.js?1725319006"></script>
+    <script src="/js/hugo-learn.js?1725319006"></script>
 
-    <link href="/mermaid/mermaid.css?1725317944" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725317944"></script>
+    <link href="/mermaid/mermaid.css?1725319006" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725319006"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
