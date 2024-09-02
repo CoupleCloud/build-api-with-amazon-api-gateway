@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: Deploy ShareNote Application on Auto Scaling Group</title>
+    <title>Monitoring and Managing Your API :: Deploy ShareNote Application on Auto Scaling Group</title>
 
     
-    <link href="/css/nucleus.css?1725314085" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725314085" rel="stylesheet">
-    <link href="/css/hybrid.css?1725314085" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725314085" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725314085" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725314085" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725314085" rel="stylesheet">
-    <link href="/css/theme.css?1725314085" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725314085" rel="stylesheet">
+    <link href="/css/nucleus.css?1725309418" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725309418" rel="stylesheet">
+    <link href="/css/hybrid.css?1725309418" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725309418" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725309418" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725309418" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725309418" rel="stylesheet">
+    <link href="/css/theme.css?1725309418" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725309418" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725314085" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725309418" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725314085"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725309418"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/6-monitor-api/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725314085"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725314085"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725309419"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725309419"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725314085"></script>
+<script type="text/javascript" src="/js/search.js?1725309419"></script>
 
     
   </div>
@@ -73,6 +73,32 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-create-lambda-function-copy/" title="CREATING A LAMBDA FUNCTION" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-create-lambda-function-copy/">
+          <b>1. </b>CREATING A LAMBDA FUNCTION
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
           
           
 
@@ -186,12 +212,12 @@
  
   
     
-    <li data-nav-id="/5-monitor-api/" title="Monitoring and Managing Your API" class="dd-item 
+    <li data-nav-id="/6-monitor-api/" title="Monitoring and Managing Your API" class="dd-item 
         
-        
+        active
         
         ">
-      <a href="/5-monitor-api/">
+      <a href="/6-monitor-api/">
           <b>5. </b>Monitoring and Managing Your API
           
             <i class="fas fa-check read-icon"></i>
@@ -243,7 +269,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/categories/" selected>English</option>
+                      <option id="en" value="//localhost:1313/6-monitor-api/" selected>English</option>
                     
                   
               
@@ -257,7 +283,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/categories/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/6-monitor-api/">Tiếng Việt</option>
                     
                   
               
@@ -350,7 +376,7 @@
             
           
           
-            <a href='/'>Setting up an AWS account</a> > Categories
+            <a href='/'>Setting up an AWS account</a> > Monitoring and Managing Your API
           
         
           
@@ -361,7 +387,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -377,9 +411,7 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Categories
+              Monitoring and Managing Your API
             </h1>
           
 
@@ -387,11 +419,102 @@
 
 
 
-
-
+	<h4 id="monitoring-and-managing-your-api">MONITORING AND MANAGING YOUR API</h4>
+<h4 id="overview">Overview</h4>
+<p>In this section, you will learn how to effectively monitor and manage your <strong>AWS API Gateway</strong> API to ensure its reliability and performance over time. Proper monitoring helps you detect and address issues proactively, while effective management ensures smooth operation and scalability.</p>
+<h4 id="what-is-api-monitoring-and-management">What is API Monitoring and Management?</h4>
+<p><strong>API Monitoring</strong> involves tracking the performance and health of your API, including metrics such as response times, error rates, and request volumes. <strong>API Management</strong> includes tasks such as updating configurations, scaling resources, and handling security.</p>
+<h4 id="steps-to-monitor-your-api">Steps to Monitor Your API</h4>
+<ol>
+<li>
+<p><strong>Enable CloudWatch Metrics</strong>:</p>
 <ul>
-	
+<li>AWS API Gateway automatically sends metrics to <strong>Amazon CloudWatch</strong>.</li>
+<li>Navigate to the <strong>CloudWatch</strong> console to view metrics like <code>4XXError</code>, <code>5XXError</code>, <code>Latency</code>, and <code>Count</code>.</li>
+<li>Set up <strong>CloudWatch Alarms</strong> to get notified of any issues based on specific thresholds.</li>
 </ul>
+</li>
+<li>
+<p><strong>Review CloudWatch Logs</strong>:</p>
+<ul>
+<li>Check logs to troubleshoot errors and understand API usage patterns.</li>
+<li>Enable logging in the <strong>API Gateway</strong> settings to capture detailed request and response data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Analyze API Gateway Dashboard</strong>:</p>
+<ul>
+<li>Use the <strong>API Gateway Console</strong> to view built-in dashboards that show traffic patterns, latency, and error rates.</li>
+<li>Review these metrics regularly to ensure your API is performing optimally.</li>
+</ul>
+</li>
+<li>
+<p><strong>Set Up Alerts</strong>:</p>
+<ul>
+<li>Create <strong>CloudWatch Alarms</strong> to notify you of issues such as high error rates or latency spikes.</li>
+<li>Configure alerts to send notifications via <strong>SNS</strong> (Simple Notification Service) or other channels.</li>
+</ul>
+</li>
+</ol>
+<h4 id="steps-to-manage-your-api">Steps to Manage Your API</h4>
+<ol>
+<li>
+<p><strong>Update API Configurations</strong>:</p>
+<ul>
+<li>Modify your API settings as needed, including routes, methods, and integrations.</li>
+<li>Use the <strong>API Gateway Console</strong> to deploy changes and ensure they are applied to the appropriate stages.</li>
+</ul>
+</li>
+<li>
+<p><strong>Handle API Versions</strong>:</p>
+<ul>
+<li>Manage different versions of your API using stages and deployments.</li>
+<li>Create new stages for version updates (e.g., <code>v1</code>, <code>v2</code>) and deprecate old versions as necessary.</li>
+</ul>
+</li>
+<li>
+<p><strong>Scale API Resources</strong>:</p>
+<ul>
+<li>Adjust the throughput settings in API Gateway to handle varying loads.</li>
+<li>Monitor usage and scale your Lambda function or other backend services as needed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Secure Your API</strong>:</p>
+<ul>
+<li>Implement security best practices such as API keys, OAuth tokens, and IP whitelisting.</li>
+<li>Regularly review and update your API’s security settings to protect against unauthorized access.</li>
+</ul>
+</li>
+<li>
+<p><strong>Document Changes</strong>:</p>
+<ul>
+<li>Maintain detailed records of any changes made to your API configuration and management practices.</li>
+<li>Document updates and version changes to keep track of your API’s evolution.</li>
+</ul>
+</li>
+</ol>
+<h4 id="main-content">Main Content</h4>
+<ol>
+<li><a href="/">Enable CloudWatch Metrics</a></li>
+<li><a href="/">Review CloudWatch Logs</a></li>
+<li><a href="/">Analyze API Gateway Dashboard</a></li>
+<li><a href="/">Set Up Alerts</a></li>
+<li><a href="/">Update API Configurations</a></li>
+<li><a href="/">Handle API Versions</a></li>
+<li><a href="/">Scale API Resources</a></li>
+<li><a href="/">Secure Your API</a></li>
+<li><a href="/">Document Changes</a></li>
+</ol>
+<h4 id="conclusion">Conclusion</h4>
+<p>Monitoring and managing your API is crucial for maintaining its reliability and performance. By using CloudWatch, analyzing metrics, handling configurations, and securing your API, you ensure that it operates smoothly and effectively meets your users&rsquo; needs.</p>
+
+<div class="notices note" ><p>Regular monitoring and proactive management help prevent issues and optimize API performance. Keep your API secure and up-to-date to provide a robust and reliable service.</p>
+</div>
+
+
+
+
 
 
 <footer class=" footline" >
@@ -507,6 +630,23 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
         
@@ -516,8 +656,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/4-test-api/" title="TESTING THE API"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-create-lambda-function/" title="CREATING A LAMBDA FUNCTION" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/1-create-lambda-function-copy/" title="CREATING A LAMBDA FUNCTION" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -527,19 +669,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725314085"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725314085"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725314085"></script>
-    <script src="/js/jquery.sticky.js?1725314085"></script>
-    <script src="/js/featherlight.min.js?1725314085"></script>
-    <script src="/js/highlight.pack.js?1725314085"></script>
+    <script src="/js/clipboard.min.js?1725309419"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725309419"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725309419"></script>
+    <script src="/js/jquery.sticky.js?1725309419"></script>
+    <script src="/js/featherlight.min.js?1725309419"></script>
+    <script src="/js/highlight.pack.js?1725309419"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725314085"></script>
-    <script src="/js/learn.js?1725314085"></script>
-    <script src="/js/hugo-learn.js?1725314085"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725309419"></script>
+    <script src="/js/learn.js?1725309419"></script>
+    <script src="/js/hugo-learn.js?1725309419"></script>
 
-    <link href="/mermaid/mermaid.css?1725314085" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725314085"></script>
+    <link href="/mermaid/mermaid.css?1725309419" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725309419"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

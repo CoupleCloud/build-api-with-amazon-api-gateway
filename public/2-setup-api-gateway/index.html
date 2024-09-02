@@ -12,21 +12,21 @@
     <title>SETTING UP API GATEWAY :: Deploy ShareNote Application on Auto Scaling Group</title>
 
     
-    <link href="/css/nucleus.css?1725294012" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725294012" rel="stylesheet">
-    <link href="/css/hybrid.css?1725294012" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725294012" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725294012" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725294012" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725294012" rel="stylesheet">
-    <link href="/css/theme.css?1725294012" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725294012" rel="stylesheet">
+    <link href="/css/nucleus.css?1725314085" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725314085" rel="stylesheet">
+    <link href="/css/hybrid.css?1725314085" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725314085" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725314085" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725314085" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725314085" rel="stylesheet">
+    <link href="/css/theme.css?1725314085" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725314085" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725294012" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725314085" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725294012"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725314085"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725294012"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725294012"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725314085"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725314085"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725294012"></script>
+<script type="text/javascript" src="/js/search.js?1725314085"></script>
 
     
   </div>
@@ -395,10 +395,26 @@
 
 	<h4 id="setting-up-api-gateway">SETTING UP API GATEWAY</h4>
 <h4 id="overview">Overview</h4>
-<p>In this section, you will learn how to set up <strong>AWS API Gateway</strong> to expose your Lambda function as a REST API. API Gateway allows you to create, deploy, and manage APIs at any scale. This setup will enable your Lambda function to handle HTTP requests and respond to API calls from clients.</p>
+<p>In this section, you will learn how to set up <strong>AWS API Gateway</strong> to expose your Lambda function as a REST API. API Gateway allows you to create, deploy, and manage APIs at any scale, enabling your Lambda function to handle HTTP requests and respond to API calls from clients.</p>
 <h4 id="what-is-aws-api-gateway">What is AWS API Gateway?</h4>
-<p><strong>AWS API Gateway</strong> is a fully managed service that makes it easy to create, publish, maintain, monitor, and secure APIs. API Gateway acts as an interface between your backend services (such as Lambda functions) and your clients, handling tasks such as request routing, authorization, and traffic management.</p>
-<h4 id="setting-up-api-gateway-1">Setting Up API Gateway</h4>
+<p><strong>AWS API Gateway</strong> is a fully managed service that simplifies the creation, publication, maintenance, monitoring, and securing of APIs. It acts as an interface between your backend services, such as Lambda functions, and your clients. API Gateway handles tasks such as request routing, authorization, and traffic management.</p>
+<h4 id="prerequisites">Prerequisites</h4>
+<p>Before setting up API Gateway, ensure you have the following:</p>
+<ol>
+<li>
+<p><strong>AWS Account</strong>:</p>
+<ul>
+<li>Create an AWS account if you don’t already have one.</li>
+</ul>
+</li>
+<li>
+<p><strong>Lambda Function</strong>:</p>
+<ul>
+<li>You should have a Lambda function created and ready to be integrated with API Gateway.</li>
+</ul>
+</li>
+</ol>
+<h4 id="steps-to-set-up-api-gateway">Steps to Set Up API Gateway</h4>
 <ol>
 <li>
 <p><strong>Log in to the AWS Management Console</strong>:</p>
@@ -416,10 +432,124 @@
 <p><strong>Create a New API</strong>:</p>
 <ul>
 <li>Click on the <strong>Create API</strong> button.</li>
-<li>Choose <strong>HTTP API</strong> (for simplicity) or <strong>REST API</strong> (for more advanced features). In this tutorial, we will use <strong>HTTP API</strong>.</li>
+<li>Select <strong>REST API</strong> to use the advanced features.</li>
+</ul>
+</li>
+<li>
+<p><strong>Define the Resource</strong>:</p>
+<ul>
+<li>Click on <strong>Actions</strong> and choose <strong>Create Resource</strong>.</li>
+<li>Provide a name for the resource and click <strong>Create Resource</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create a Method</strong>:</p>
+<ul>
+<li>Select the newly created resource.</li>
+<li>Click on <strong>Actions</strong> and choose <strong>Create Method</strong>.</li>
+<li>Choose the HTTP verb (e.g., GET, POST, PUT, DELETE) and click on the checkmark to create the method.</li>
+</ul>
+</li>
+<li>
+<p><strong>Integrate with Lambda Function</strong>:</p>
+<ul>
+<li>In the <strong>Integration type</strong> section, select <strong>Lambda Function</strong>.</li>
+<li>Enter the name of the Lambda function you want to use.</li>
+<li>Click <strong>Save</strong> to link the Lambda function with the API method.</li>
+</ul>
+</li>
+<li>
+<p><strong>Deploy the API</strong>:</p>
+<ul>
+<li>Click on <strong>Actions</strong> and select <strong>Deploy API</strong>.</li>
+<li>Choose or create a new deployment stage (e.g., <code>prod</code> or <code>test</code>).</li>
+<li>Click <strong>Deploy</strong> to make your API available.</li>
+</ul>
+</li>
+<li>
+<p><strong>Code Example</strong>:</p>
+<ul>
+<li>
+<p>Here is a sample Lambda function code to handle different HTTP methods:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example data</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;items&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Item 1&#34;</span>, <span style="color:#e6db74">&#34;price&#34;</span>: <span style="color:#ae81ff">10.99</span>},
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Item 2&#34;</span>, <span style="color:#e6db74">&#34;price&#34;</span>: <span style="color:#ae81ff">15.99</span>},
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Item 3&#34;</span>, <span style="color:#e6db74">&#34;price&#34;</span>: <span style="color:#ae81ff">20.99</span>},
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Determine the HTTP method of the request</span>
+</span></span><span style="display:flex;"><span>    http_method <span style="color:#f92672">=</span> event[<span style="color:#e6db74">&#34;httpMethod&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Handle GET request</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> http_method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;GET&#34;</span>:
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;body&#34;</span>: json<span style="color:#f92672">.</span>dumps(data)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> response
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Handle POST request</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> http_method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;POST&#34;</span>:
+</span></span><span style="display:flex;"><span>        body <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(event[<span style="color:#e6db74">&#34;body&#34;</span>])
+</span></span><span style="display:flex;"><span>        data[<span style="color:#e6db74">&#34;items&#34;</span>]<span style="color:#f92672">.</span>append(body)
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;body&#34;</span>: json<span style="color:#f92672">.</span>dumps(data)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> response
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Handle PUT request</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> http_method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;PUT&#34;</span>:
+</span></span><span style="display:flex;"><span>        body <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(event[<span style="color:#e6db74">&#34;body&#34;</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> data[<span style="color:#e6db74">&#34;items&#34;</span>]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> item[<span style="color:#e6db74">&#34;id&#34;</span>] <span style="color:#f92672">==</span> body[<span style="color:#e6db74">&#34;id&#34;</span>]:
+</span></span><span style="display:flex;"><span>                item<span style="color:#f92672">.</span>update(body)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;body&#34;</span>: json<span style="color:#f92672">.</span>dumps(data)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> response
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Handle DELETE request</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> http_method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;DELETE&#34;</span>:
+</span></span><span style="display:flex;"><span>        body <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(event[<span style="color:#e6db74">&#34;body&#34;</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, item <span style="color:#f92672">in</span> enumerate(data[<span style="color:#e6db74">&#34;items&#34;</span>]):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> item[<span style="color:#e6db74">&#34;id&#34;</span>] <span style="color:#f92672">==</span> body[<span style="color:#e6db74">&#34;id&#34;</span>]:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">del</span> data[<span style="color:#e6db74">&#34;items&#34;</span>][i]
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;body&#34;</span>: json<span style="color:#f92672">.</span>dumps(data)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> response
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">405</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;body&#34;</span>: json<span style="color:#f92672">.</span>dumps({<span style="color:#e6db74">&#34;error&#34;</span>: <span style="color:#e6db74">&#34;Method not allowed&#34;</span>})
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> response
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Testing with Postman</strong>:</p>
+<ul>
+<li>Use the generated API endpoint to test your API.</li>
+<li>Open Postman and send HTTP requests to the invoke URL to verify that the API responds correctly.</li>
+<li>For GET requests, no request body is needed. For POST, PUT, and DELETE, include appropriate request bodies.</li>
 </ul>
 </li>
 </ol>
+<h4 id="conclusion">Conclusion</h4>
+<p>After setting up and deploying your API, use tools like Postman to ensure it functions as expected. Properly testing your API will help verify that it handles requests correctly and integrates seamlessly with your Lambda function.</p>
 
 
 
@@ -564,19 +694,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725294012"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725294012"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725294012"></script>
-    <script src="/js/jquery.sticky.js?1725294012"></script>
-    <script src="/js/featherlight.min.js?1725294012"></script>
-    <script src="/js/highlight.pack.js?1725294012"></script>
+    <script src="/js/clipboard.min.js?1725314085"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725314085"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725314085"></script>
+    <script src="/js/jquery.sticky.js?1725314085"></script>
+    <script src="/js/featherlight.min.js?1725314085"></script>
+    <script src="/js/highlight.pack.js?1725314085"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725294012"></script>
-    <script src="/js/learn.js?1725294012"></script>
-    <script src="/js/hugo-learn.js?1725294012"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725314085"></script>
+    <script src="/js/learn.js?1725314085"></script>
+    <script src="/js/hugo-learn.js?1725314085"></script>
 
-    <link href="/mermaid/mermaid.css?1725294012" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725294012"></script>
+    <link href="/mermaid/mermaid.css?1725314085" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725314085"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

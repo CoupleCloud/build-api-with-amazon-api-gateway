@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: Deploy ShareNote Application on Auto Scaling Group</title>
+    <title>TESTING THE API :: Deploy ShareNote Application on Auto Scaling Group</title>
 
     
-    <link href="/css/nucleus.css?1725314085" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725314085" rel="stylesheet">
-    <link href="/css/hybrid.css?1725314085" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725314085" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725314085" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725314085" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725314085" rel="stylesheet">
-    <link href="/css/theme.css?1725314085" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725314085" rel="stylesheet">
+    <link href="/css/nucleus.css?1725309418" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725309418" rel="stylesheet">
+    <link href="/css/hybrid.css?1725309418" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725309418" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725309418" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725309418" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725309418" rel="stylesheet">
+    <link href="/css/theme.css?1725309418" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725309418" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725314085" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725309418" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725314085"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725309418"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/5-test-api/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725314085"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725314085"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725309418"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725309418"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725314085"></script>
+<script type="text/javascript" src="/js/search.js?1725309418"></script>
 
     
   </div>
@@ -73,6 +73,32 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-create-lambda-function-copy/" title="CREATING A LAMBDA FUNCTION" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-create-lambda-function-copy/">
+          <b>1. </b>CREATING A LAMBDA FUNCTION
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
           
           
 
@@ -160,12 +186,12 @@
  
   
     
-    <li data-nav-id="/4-test-api/" title="TESTING THE API" class="dd-item 
+    <li data-nav-id="/5-test-api/" title="TESTING THE API" class="dd-item 
         
-        
+        active
         
         ">
-      <a href="/4-test-api/">
+      <a href="/5-test-api/">
           <b>4. </b>TESTING THE API
           
             <i class="fas fa-check read-icon"></i>
@@ -186,12 +212,12 @@
  
   
     
-    <li data-nav-id="/5-monitor-api/" title="Monitoring and Managing Your API" class="dd-item 
+    <li data-nav-id="/6-monitor-api/" title="Monitoring and Managing Your API" class="dd-item 
         
         
         
         ">
-      <a href="/5-monitor-api/">
+      <a href="/6-monitor-api/">
           <b>5. </b>Monitoring and Managing Your API
           
             <i class="fas fa-check read-icon"></i>
@@ -243,7 +269,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/categories/" selected>English</option>
+                      <option id="en" value="//localhost:1313/5-test-api/" selected>English</option>
                     
                   
               
@@ -257,7 +283,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/categories/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/5-test-api/">Tiếng Việt</option>
                     
                   
               
@@ -350,7 +376,7 @@
             
           
           
-            <a href='/'>Setting up an AWS account</a> > Categories
+            <a href='/'>Setting up an AWS account</a> > TESTING THE API
           
         
           
@@ -361,7 +387,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -377,9 +411,7 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Categories
+              TESTING THE API
             </h1>
           
 
@@ -387,11 +419,99 @@
 
 
 
-
-
+	<h4 id="testing-the-api">TESTING THE API</h4>
+<h4 id="overview">Overview</h4>
+<p>In this section, you will learn how to test your deployed <strong>AWS API Gateway</strong> API to ensure it is functioning as expected. Testing verifies that the API endpoints are correctly integrated with your Lambda function and that they respond properly to client requests.</p>
+<h4 id="what-is-api-testing">What is API Testing?</h4>
+<p><strong>API Testing</strong> involves sending requests to your API endpoints and checking the responses to ensure that they meet your expectations. It helps validate that your API is working correctly and can handle different types of input, including valid and invalid requests.</p>
+<h4 id="steps-to-test-your-api">Steps to Test Your API</h4>
+<ol>
+<li>
+<p><strong>Obtain the API Endpoint URL</strong>:</p>
 <ul>
-	
+<li>After deploying your API, API Gateway provides an <strong>Invoke URL</strong>.</li>
+<li>Navigate to the <strong>Stages</strong> section in the API Gateway console and find the URL for your deployment stage (e.g., <code>https://abc123.execute-api.region.amazonaws.com/prod</code>).</li>
 </ul>
+</li>
+<li>
+<p><strong>Choose a Testing Tool</strong>:</p>
+<ul>
+<li>You can use various tools to test your API, such as:
+<ul>
+<li><strong>Postman</strong>: A popular tool for sending HTTP requests and analyzing responses.</li>
+<li><strong>cURL</strong>: A command-line tool for transferring data with URLs.</li>
+<li><strong>Browser</strong>: For simple GET requests.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Send Test Requests</strong>:</p>
+<ul>
+<li><strong>Using Postman</strong>:
+<ul>
+<li>Open Postman and create a new request.</li>
+<li>Set the request method (GET, POST, etc.) and enter the API endpoint URL.</li>
+<li>If applicable, add request headers, query parameters, or a request body.</li>
+<li>Click <strong>Send</strong> to execute the request and review the response.</li>
+</ul>
+</li>
+<li><strong>Using cURL</strong>:
+<ul>
+<li>Open a terminal and use the <code>curl</code> command to send a request. For example:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X GET <span style="color:#e6db74">&#34;https://abc123.execute-api.region.amazonaws.com/prod/hello&#34;</span>
+</span></span></code></pre></div></li>
+<li>Review the response directly in the terminal.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Verify the Response</strong>:</p>
+<ul>
+<li>Check that the API returns the expected status code (e.g., 200 OK for successful requests).</li>
+<li>Validate the response body to ensure it matches the expected output from your Lambda function.</li>
+<li>Test different scenarios, including edge cases and error conditions, to ensure the API handles all cases properly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Debug Issues</strong>:</p>
+<ul>
+<li>If you encounter unexpected results, check the following:
+<ul>
+<li><strong>CloudWatch Logs</strong>: Inspect the logs for your Lambda function in CloudWatch to see any errors or debug information.</li>
+<li><strong>API Gateway Logs</strong>: Enable logging in API Gateway to capture request and response data.</li>
+<li><strong>Lambda Configuration</strong>: Ensure your Lambda function is correctly configured and has the appropriate permissions.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Document Your Tests</strong>:</p>
+<ul>
+<li>Record the test cases you have executed, including the requests made and the responses received.</li>
+<li>Note any issues discovered and steps taken to resolve them.</li>
+</ul>
+</li>
+</ol>
+<h4 id="main-content">Main Content</h4>
+<ol>
+<li><a href="/">Obtain the API Endpoint URL</a></li>
+<li><a href="/">Choose a Testing Tool</a></li>
+<li><a href="/">Send Test Requests</a></li>
+<li><a href="/">Verify the Response</a></li>
+<li><a href="/">Debug Issues</a></li>
+<li><a href="/">Document Your Tests</a></li>
+</ol>
+<h4 id="conclusion">Conclusion</h4>
+<p>Testing is a crucial step to ensure that your API is functioning correctly and meets your requirements. By thoroughly testing your API, you can identify and resolve issues before your API is used in production. The final step involves monitoring and maintaining your API to ensure ongoing reliability and performance.</p>
+
+<div class="notices note" ><p>Be thorough in your testing to cover a range of scenarios and edge cases. Proper testing helps ensure that your API performs well under various conditions and provides a good experience for its users.</p>
+</div>
+
+
+
+
 
 
 <footer class=" footline" >
@@ -496,6 +616,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -516,8 +656,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/3-deploy-api/" title="DEPLOYING THE API"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-create-lambda-function/" title="CREATING A LAMBDA FUNCTION" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/6-monitor-api/" title="Monitoring and Managing Your API" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -527,19 +669,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725314085"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725314085"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725314085"></script>
-    <script src="/js/jquery.sticky.js?1725314085"></script>
-    <script src="/js/featherlight.min.js?1725314085"></script>
-    <script src="/js/highlight.pack.js?1725314085"></script>
+    <script src="/js/clipboard.min.js?1725309418"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725309418"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725309418"></script>
+    <script src="/js/jquery.sticky.js?1725309418"></script>
+    <script src="/js/featherlight.min.js?1725309418"></script>
+    <script src="/js/highlight.pack.js?1725309418"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725314085"></script>
-    <script src="/js/learn.js?1725314085"></script>
-    <script src="/js/hugo-learn.js?1725314085"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725309418"></script>
+    <script src="/js/learn.js?1725309418"></script>
+    <script src="/js/hugo-learn.js?1725309418"></script>
 
-    <link href="/mermaid/mermaid.css?1725314085" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725314085"></script>
+    <link href="/mermaid/mermaid.css?1725309418" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725309418"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

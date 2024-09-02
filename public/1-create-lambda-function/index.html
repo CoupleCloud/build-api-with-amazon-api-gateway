@@ -12,21 +12,21 @@
     <title>CREATING A LAMBDA FUNCTION :: Deploy ShareNote Application on Auto Scaling Group</title>
 
     
-    <link href="/css/nucleus.css?1725294255" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725294255" rel="stylesheet">
-    <link href="/css/hybrid.css?1725294255" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725294255" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725294255" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725294255" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725294255" rel="stylesheet">
-    <link href="/css/theme.css?1725294255" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725294255" rel="stylesheet">
+    <link href="/css/nucleus.css?1725314085" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725314085" rel="stylesheet">
+    <link href="/css/hybrid.css?1725314085" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725314085" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725314085" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725314085" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725314085" rel="stylesheet">
+    <link href="/css/theme.css?1725314085" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725314085" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725294255" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725314085" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725294255"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725314085"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725294255"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725294255"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725314085"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725314085"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725294255"></script>
+<script type="text/javascript" src="/js/search.js?1725314085"></script>
 
     
   </div>
@@ -404,11 +404,11 @@
 </ol>
 <p><img alt="Image" src="/images/1/0_overview.png?width=300pc"></p>
 <ol start="2">
-<li>
-<p><strong>Navigate to the Lambda Service</strong>: In the AWS Management Console, search for and select <strong>Lambda</strong> from the list of services.</p>
-</li>
-<li>
-<p><strong>Create a New Lambda Function</strong>:</p>
+<li><strong>Navigate to the Lambda Service</strong>: In the AWS Management Console, search for and select <strong>Lambda</strong> from the list of services.</li>
+</ol>
+<p><img alt="Image" src="/images/1/1_lambda.png?width=300pc"></p>
+<ol start="3">
+<li><strong>Create a New Lambda Function</strong>:
 <ul>
 <li>Click the <strong>Create function</strong> button.</li>
 <li>Choose <strong>Author from scratch</strong>. This option lets you start with a blank function.</li>
@@ -417,18 +417,38 @@
 <li>Under <strong>Permissions</strong>, choose <strong>Create a new role with basic Lambda permissions</strong> to allow Lambda to execute your code and write logs to CloudWatch.</li>
 </ul>
 </li>
+</ol>
+<p><img alt="Image" src="/images/1/1_create_function.png?width=300pc"></p>
+<ol start="4">
 <li>
 <p><strong>Write or Upload Your Code</strong>:</p>
 <ul>
-<li>In the <strong>Function code</strong> section, you can write your code directly in the inline editor or upload a .zip file containing your code and dependencies.</li>
-<li>For demonstration, here&rsquo;s a simple Node.js example that returns a &ldquo;Hello, World!&rdquo; message:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">handler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">event</span>) =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#e6db74">&#39;Hello, World!&#39;</span>),
-</span></span><span style="display:flex;"><span>    };
+<li>In the <strong>Function code</strong> section, you should see the code editor where you can edit your Lambda function&rsquo;s code.</li>
+<li>If the <strong>index.mjs</strong> tab is not visible in the code editor, select it from the file explorer. This file contains the code for your Lambda function.</li>
+</ul>
+<p><img alt="Image" src="/images/1/1_index.mjs.png?width=300pc"></p>
+<ul>
+<li>Paste the following code into the <strong>index.mjs</strong> tab, replacing any existing code:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">handler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">event</span>, <span style="color:#a6e22e">context</span>) =&gt; {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">width</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">area</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calculateArea</span>(<span style="color:#a6e22e">length</span>, <span style="color:#a6e22e">width</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`The area is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">area</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;CloudWatch log group: &#39;</span>, <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">logGroupName</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;area&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">area</span>,
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calculateArea</span>(<span style="color:#a6e22e">length</span>, <span style="color:#a6e22e">width</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">length</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">width</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>};
 </span></span></code></pre></div></li>
+<li>Click <strong>Deploy</strong> to update your function&rsquo;s code. Once Lambda has successfully deployed the changes, you will see a banner confirming that your function has been updated.</li>
 </ul>
 </li>
 <li>
@@ -441,24 +461,66 @@
 <li>
 <p><strong>Test Your Lambda Function</strong>:</p>
 <ul>
-<li>Click the <strong>Test</strong> button to create a test event. Provide a name for the test event and use the default event template.</li>
-<li>Click <strong>Create</strong> to save the test event and then <strong>Test</strong> to execute your Lambda function. Verify that the output matches your expectations.</li>
-</ul>
+<li>
+<p>To invoke your Lambda function using the console, you first need to create a test event:</p>
+<ol>
+<li>In the <strong>Code source</strong> pane of the Lambda console, click <strong>Test</strong>.</li>
+<li>Select <strong>Create new event</strong>.</li>
+<li>For <strong>Event name</strong>, enter <code>myTestEvent</code>.</li>
+<li>In the <strong>Event JSON</strong> panel, replace the default values with the following:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;length&#34;</span>: <span style="color:#ae81ff">6</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;width&#34;</span>: <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>Click <strong>Save</strong> to create the test event.</li>
+</ol>
 </li>
 <li>
-<p><strong>Save Your Function</strong>:</p>
+<p>To run the test and view the results:</p>
+<ol>
+<li>In the <strong>Code source</strong> pane, click <strong>Test</strong> again.</li>
+<li>After the function executes, you will see the response and logs displayed in the <strong>Execution results</strong> tab. The expected results should be similar to:
+<pre tabindex="0"><code>Test Event Name: myTestEvent
+
+Response:
+&#34;{\&#34;area\&#34;:42}&#34;
+
+Function Logs:
+START RequestId: 5c012b0a-18f7-4805-b2f6-40912935034a Version: $LATEST
+2023-08-31T23:39:45.313Z 5c012b0a-18f7-4805-b2f6-40912935034a INFO The area is 42
+2023-08-31T23:39:45.331Z 5c012b0a-18f7-4805-b2f6-40912935034a INFO CloudWatch log group: /aws/lambda/myLambdaFunction
+END RequestId: 5c012b0a-18f7-4805-b2f6-40912935034a
+REPORT RequestId: 5c012b0a-18f7-4805-b2f6-40912935034a Duration: 20.67 ms Billed Duration: 21 ms Memory Size: 128 MB Max Memory Used: 66 MB Init Duration: 163.87 ms
+</code></pre></li>
+</ol>
+</li>
+<li>
+<p>To view the invocation records in <strong>CloudWatch Logs</strong>:</p>
+<ol>
+<li>Open the <strong>Log groups</strong> page of the CloudWatch console.</li>
+<li>Select the log group for your function, which is <code>/aws/lambda/myLambdaFunction</code>.</li>
+<li>In the <strong>Log streams</strong> tab, choose the log stream corresponding to your function&rsquo;s invocation.</li>
+<li>You should see output similar to:
+<pre tabindex="0"><code>INIT_START Runtime Version: nodejs:20.v13 Runtime Version ARN: arn:aws:lambda:us-west-2::runtime:e3aaabf6b92ef8755eaae2f4bfdcb7eb8c4536a5e044900570a42bdba7b869d9
+START RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20 Version: $LATEST
+2023-08-23T22:04:15.809Z 5c012b0a-18f7-4805-b2f6-40912935034a INFO The area is 42
+2023-08-23T22:04:15.810Z aba6c0fc-cf99-49d7-a77d-26d805dacd20 INFO CloudWatch log group: /aws/lambda/myLambdaFunction
+END RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20
+REPORT RequestId: aba6c0fc-cf99-49d7-a77d-26d805dacd20 Duration: 17.77 ms Billed Duration: 18 ms Memory Size: 128 MB Max Memory Used: 67 MB Init Duration: 178.85 ms
+</code></pre></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<p>In this process, you create a test event, execute the function, and verify the output both in the Lambda console and CloudWatch Logs.</p>
+<ol start="7">
+<li><strong>Save Your Function</strong>:
 <ul>
 <li>Click <strong>Deploy</strong> to save your changes.</li>
 </ul>
 </li>
-</ol>
-<h4 id="main-content">Main Content</h4>
-<ol>
-<li><a href="/">Log in to the AWS Management Console</a></li>
-<li><a href="/">Navigate to the Lambda Service</a></li>
-<li><a href="/">Create a New Lambda Function</a></li>
-<li><a href="/">Write or Upload Your Code</a></li>
-<li>[Configure Function Se</li>
 </ol>
 
 
@@ -601,19 +663,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725294255"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725294255"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725294255"></script>
-    <script src="/js/jquery.sticky.js?1725294255"></script>
-    <script src="/js/featherlight.min.js?1725294255"></script>
-    <script src="/js/highlight.pack.js?1725294255"></script>
+    <script src="/js/clipboard.min.js?1725314085"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725314085"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725314085"></script>
+    <script src="/js/jquery.sticky.js?1725314085"></script>
+    <script src="/js/featherlight.min.js?1725314085"></script>
+    <script src="/js/highlight.pack.js?1725314085"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725294255"></script>
-    <script src="/js/learn.js?1725294255"></script>
-    <script src="/js/hugo-learn.js?1725294255"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725314085"></script>
+    <script src="/js/learn.js?1725314085"></script>
+    <script src="/js/hugo-learn.js?1725314085"></script>
 
-    <link href="/mermaid/mermaid.css?1725294255" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725294255"></script>
+    <link href="/mermaid/mermaid.css?1725314085" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725314085"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

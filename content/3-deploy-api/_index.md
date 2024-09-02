@@ -9,10 +9,10 @@ pre = "<b>3. </b>"
 #### DEPLOYING THE API
 
 #### Overview
-In this section, you will learn how to deploy your **AWS API Gateway** configuration. Deployment makes your API available to clients over the internet, allowing it to process real HTTP requests and interact with your Lambda function. You will set up a deployment stage and publish your API to this stage.
+In this section, you will learn how to deploy your **AWS API Gateway** configuration. Deployment makes your API available to clients over the internet, enabling it to process real HTTP requests and interact with your backend services. You'll set up a deployment stage and publish your API to make it accessible.
 
 #### What is API Deployment?
-**API Deployment** is the process of making your API configuration available for use. When you deploy an API in API Gateway, you create a stage (such as `dev`, `test`, or `prod`) where your API endpoints are accessible. This stage provides a URL that clients can use to make requests to your API.
+**API Deployment** refers to the process of making your API configuration available for use. When deploying an API in API Gateway, you create a stage (e.g., `dev`, `test`, `prod`) that provides a URL for clients to access your API endpoints. This stage acts as a snapshot of your API at a specific point in time.
 
 #### Steps to Deploy the API
 
@@ -24,27 +24,27 @@ In this section, you will learn how to deploy your **AWS API Gateway** configura
 
 3. **Select Your API**:
    - Click on **APIs** in the sidebar to view your API list.
-   - Select the API that you created and configured in the previous steps.
+   - Select the API you have created and configured previously.
 
 4. **Create a Deployment Stage**:
    - Go to the **Stages** section on the left-hand menu.
    - Click **Create** to set up a new deployment stage.
    - Enter a name for your stage (e.g., `prod` for production or `dev` for development).
-   - Optionally, add a description and configure stage variables if needed.
+   - Optionally, provide a description and configure stage variables if needed.
    - Click **Create** to save the stage.
 
 5. **Deploy the API**:
-   - In the **Stages** section, select the stage you just created.
+   - In the **Stages** section, select the stage you created.
    - Click **Deploy API** to publish your API to this stage.
    - Choose the deployment stage from the dropdown menu and click **Deploy**.
 
 6. **Review the API Endpoint**:
-   - After deploying, API Gateway provides an **Invoke URL** for your API. This URL is the endpoint that clients use to access your API.
-   - Copy the **Invoke URL** from the stage details.
+   - After deployment, API Gateway provides an **Invoke URL** for your API. This URL is used by clients to access your API.
+   - Copy the **Invoke URL** from the stage details for use in testing.
 
 7. **Test the API**:
    - Use tools like Postman or curl to send requests to the API endpoint.
-   - Verify that the requests are processed correctly and that the responses match your expectations.
+   - Verify that the requests are processed correctly and that responses meet your expectations.
 
 8. **Monitor and Manage**:
    - Use AWS CloudWatch to monitor API usage and performance.
@@ -62,7 +62,7 @@ In this section, you will learn how to deploy your **AWS API Gateway** configura
 8. [Monitor and Manage](#)
 
 #### Conclusion
-Your API is now deployed and accessible via the provided endpoint URL. You can start making real HTTP requests to your API and monitor its performance using CloudWatch. The next step is to ensure that your API is secure and optimized for production use.
+Your API is now deployed and accessible via the provided endpoint URL. Start making real HTTP requests to your API and monitor its performance using CloudWatch. The next step is to ensure your API is secure and optimized for production use.
 
 {{% notice note %}}
 Remember to manage and rotate your API keys and access tokens if you are using authentication. Proper security practices help safeguard your API from unauthorized access and potential misuse.

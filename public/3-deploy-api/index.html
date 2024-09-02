@@ -12,21 +12,21 @@
     <title>DEPLOYING THE API :: Deploy ShareNote Application on Auto Scaling Group</title>
 
     
-    <link href="/css/nucleus.css?1725294012" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725294012" rel="stylesheet">
-    <link href="/css/hybrid.css?1725294012" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725294012" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725294012" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725294012" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725294012" rel="stylesheet">
-    <link href="/css/theme.css?1725294012" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725294012" rel="stylesheet">
+    <link href="/css/nucleus.css?1725314085" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725314085" rel="stylesheet">
+    <link href="/css/hybrid.css?1725314085" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725314085" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725314085" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725314085" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725314085" rel="stylesheet">
+    <link href="/css/theme.css?1725314085" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725314085" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725294012" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725314085" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725294012"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725314085"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725294012"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725294012"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725314085"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725314085"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725294012"></script>
+<script type="text/javascript" src="/js/search.js?1725314085"></script>
 
     
   </div>
@@ -395,9 +395,9 @@
 
 	<h4 id="deploying-the-api">DEPLOYING THE API</h4>
 <h4 id="overview">Overview</h4>
-<p>In this section, you will learn how to deploy your <strong>AWS API Gateway</strong> configuration. Deployment makes your API available to clients over the internet, allowing it to process real HTTP requests and interact with your Lambda function. You will set up a deployment stage and publish your API to this stage.</p>
+<p>In this section, you will learn how to deploy your <strong>AWS API Gateway</strong> configuration. Deployment makes your API available to clients over the internet, enabling it to process real HTTP requests and interact with your backend services. You&rsquo;ll set up a deployment stage and publish your API to make it accessible.</p>
 <h4 id="what-is-api-deployment">What is API Deployment?</h4>
-<p><strong>API Deployment</strong> is the process of making your API configuration available for use. When you deploy an API in API Gateway, you create a stage (such as <code>dev</code>, <code>test</code>, or <code>prod</code>) where your API endpoints are accessible. This stage provides a URL that clients can use to make requests to your API.</p>
+<p><strong>API Deployment</strong> refers to the process of making your API configuration available for use. When deploying an API in API Gateway, you create a stage (e.g., <code>dev</code>, <code>test</code>, <code>prod</code>) that provides a URL for clients to access your API endpoints. This stage acts as a snapshot of your API at a specific point in time.</p>
 <h4 id="steps-to-deploy-the-api">Steps to Deploy the API</h4>
 <ol>
 <li>
@@ -416,7 +416,7 @@
 <p><strong>Select Your API</strong>:</p>
 <ul>
 <li>Click on <strong>APIs</strong> in the sidebar to view your API list.</li>
-<li>Select the API that you created and configured in the previous steps.</li>
+<li>Select the API you have created and configured previously.</li>
 </ul>
 </li>
 <li>
@@ -425,14 +425,14 @@
 <li>Go to the <strong>Stages</strong> section on the left-hand menu.</li>
 <li>Click <strong>Create</strong> to set up a new deployment stage.</li>
 <li>Enter a name for your stage (e.g., <code>prod</code> for production or <code>dev</code> for development).</li>
-<li>Optionally, add a description and configure stage variables if needed.</li>
+<li>Optionally, provide a description and configure stage variables if needed.</li>
 <li>Click <strong>Create</strong> to save the stage.</li>
 </ul>
 </li>
 <li>
 <p><strong>Deploy the API</strong>:</p>
 <ul>
-<li>In the <strong>Stages</strong> section, select the stage you just created.</li>
+<li>In the <strong>Stages</strong> section, select the stage you created.</li>
 <li>Click <strong>Deploy API</strong> to publish your API to this stage.</li>
 <li>Choose the deployment stage from the dropdown menu and click <strong>Deploy</strong>.</li>
 </ul>
@@ -440,15 +440,15 @@
 <li>
 <p><strong>Review the API Endpoint</strong>:</p>
 <ul>
-<li>After deploying, API Gateway provides an <strong>Invoke URL</strong> for your API. This URL is the endpoint that clients use to access your API.</li>
-<li>Copy the <strong>Invoke URL</strong> from the stage details.</li>
+<li>After deployment, API Gateway provides an <strong>Invoke URL</strong> for your API. This URL is used by clients to access your API.</li>
+<li>Copy the <strong>Invoke URL</strong> from the stage details for use in testing.</li>
 </ul>
 </li>
 <li>
 <p><strong>Test the API</strong>:</p>
 <ul>
 <li>Use tools like Postman or curl to send requests to the API endpoint.</li>
-<li>Verify that the requests are processed correctly and that the responses match your expectations.</li>
+<li>Verify that the requests are processed correctly and that responses meet your expectations.</li>
 </ul>
 </li>
 <li>
@@ -471,7 +471,7 @@
 <li><a href="/">Monitor and Manage</a></li>
 </ol>
 <h4 id="conclusion">Conclusion</h4>
-<p>Your API is now deployed and accessible via the provided endpoint URL. You can start making real HTTP requests to your API and monitor its performance using CloudWatch. The next step is to ensure that your API is secure and optimized for production use.</p>
+<p>Your API is now deployed and accessible via the provided endpoint URL. Start making real HTTP requests to your API and monitor its performance using CloudWatch. The next step is to ensure your API is secure and optimized for production use.</p>
 
 <div class="notices note" ><p>Remember to manage and rotate your API keys and access tokens if you are using authentication. Proper security practices help safeguard your API from unauthorized access and potential misuse.</p>
 </div>
@@ -620,19 +620,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725294012"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725294012"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725294012"></script>
-    <script src="/js/jquery.sticky.js?1725294012"></script>
-    <script src="/js/featherlight.min.js?1725294012"></script>
-    <script src="/js/highlight.pack.js?1725294012"></script>
+    <script src="/js/clipboard.min.js?1725314085"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725314085"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725314085"></script>
+    <script src="/js/jquery.sticky.js?1725314085"></script>
+    <script src="/js/featherlight.min.js?1725314085"></script>
+    <script src="/js/highlight.pack.js?1725314085"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725294012"></script>
-    <script src="/js/learn.js?1725294012"></script>
-    <script src="/js/hugo-learn.js?1725294012"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725314085"></script>
+    <script src="/js/learn.js?1725314085"></script>
+    <script src="/js/hugo-learn.js?1725314085"></script>
 
-    <link href="/mermaid/mermaid.css?1725294012" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725294012"></script>
+    <link href="/mermaid/mermaid.css?1725314085" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725314085"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: Deploy ShareNote Application on Auto Scaling Group</title>
+    <title>CREATING A LAMBDA FUNCTION :: Deploy ShareNote Application on Auto Scaling Group</title>
 
     
-    <link href="/css/nucleus.css?1725314085" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725314085" rel="stylesheet">
-    <link href="/css/hybrid.css?1725314085" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725314085" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725314085" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725314085" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725314085" rel="stylesheet">
-    <link href="/css/theme.css?1725314085" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725314085" rel="stylesheet">
+    <link href="/css/nucleus.css?1725309418" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725309418" rel="stylesheet">
+    <link href="/css/hybrid.css?1725309418" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725309418" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725309418" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725309418" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725309418" rel="stylesheet">
+    <link href="/css/theme.css?1725309418" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725309418" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725314085" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725309418" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725314085"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725309418"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/1-create-lambda-function-copy/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725314085"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725314085"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725309418"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725309418"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725314085"></script>
+<script type="text/javascript" src="/js/search.js?1725309418"></script>
 
     
   </div>
@@ -73,6 +73,32 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-create-lambda-function-copy/" title="CREATING A LAMBDA FUNCTION" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/1-create-lambda-function-copy/">
+          <b>1. </b>CREATING A LAMBDA FUNCTION
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
           
           
 
@@ -160,12 +186,12 @@
  
   
     
-    <li data-nav-id="/4-test-api/" title="TESTING THE API" class="dd-item 
+    <li data-nav-id="/5-test-api/" title="TESTING THE API" class="dd-item 
         
         
         
         ">
-      <a href="/4-test-api/">
+      <a href="/5-test-api/">
           <b>4. </b>TESTING THE API
           
             <i class="fas fa-check read-icon"></i>
@@ -186,12 +212,12 @@
  
   
     
-    <li data-nav-id="/5-monitor-api/" title="Monitoring and Managing Your API" class="dd-item 
+    <li data-nav-id="/6-monitor-api/" title="Monitoring and Managing Your API" class="dd-item 
         
         
         
         ">
-      <a href="/5-monitor-api/">
+      <a href="/6-monitor-api/">
           <b>5. </b>Monitoring and Managing Your API
           
             <i class="fas fa-check read-icon"></i>
@@ -243,7 +269,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/categories/" selected>English</option>
+                      <option id="en" value="//localhost:1313/1-create-lambda-function-copy/" selected>English</option>
                     
                   
               
@@ -257,7 +283,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/categories/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-create-lambda-function-copy/">Tiếng Việt</option>
                     
                   
               
@@ -350,7 +376,7 @@
             
           
           
-            <a href='/'>Setting up an AWS account</a> > Categories
+            <a href='/'>Setting up an AWS account</a> > CREATING A LAMBDA FUNCTION
           
         
           
@@ -361,7 +387,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -377,9 +411,7 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Categories
+              CREATING A LAMBDA FUNCTION
             </h1>
           
 
@@ -387,11 +419,79 @@
 
 
 
-
-
+	<h4 id="creating-a-lambda-function">CREATING A LAMBDA FUNCTION</h4>
+<h4 id="overview">Overview</h4>
+<p>In this section, you will learn how to create an <strong>AWS Lambda function</strong>. AWS Lambda allows you to run code in response to events without provisioning or managing servers. This step is crucial as it will enable you to process the requests that come from your API Gateway.</p>
+<h4 id="what-is-aws-lambda">What is AWS Lambda?</h4>
+<p><strong>AWS Lambda</strong> is a serverless computing service provided by AWS that executes your code only when needed and scales automatically. It eliminates the need to manage infrastructure, allowing you to focus solely on your code. Lambda functions can be triggered by various AWS services, such as API Gateway, S3, DynamoDB, and more.</p>
+<h4 id="creating-a-lambda-function-1">Creating a Lambda Function</h4>
+<ol>
+<li><strong>Log in to the AWS Management Console</strong>: Go to the <a href="https://aws.amazon.com/console/">AWS Management Console</a> and sign in with your credentials.</li>
+</ol>
+<p><img alt="Image" src="/images/1/0_overview.png?width=300pc"></p>
+<ol start="2">
+<li><strong>Navigate to the Lambda Service</strong>: In the AWS Management Console, search for and select <strong>Lambda</strong> from the list of services.</li>
+</ol>
+<p><img alt="Image" src="/images/1/1_lambda.png?width=300pc"></p>
+<ol start="3">
+<li><strong>Create a New Lambda Function</strong>:
 <ul>
-	
+<li>Click the <strong>Create function</strong> button.</li>
+<li>Choose <strong>Author from scratch</strong>. This option lets you start with a blank function.</li>
+<li>Enter a name for your function in the <strong>Function name</strong> field. For example, <code>MyApiLambdaFunction</code>.</li>
+<li>Select a runtime for your function from the <strong>Runtime</strong> dropdown. You can choose from various languages such as Node.js, Python, Java, and more.</li>
+<li>Under <strong>Permissions</strong>, choose <strong>Create a new role with basic Lambda permissions</strong> to allow Lambda to execute your code and write logs to CloudWatch.</li>
 </ul>
+</li>
+</ol>
+<p><img alt="Image" src="/images/1/1_create_function.png?width=300pc"></p>
+<ol start="4">
+<li>
+<p><strong>Write or Upload Your Code</strong>:</p>
+<ul>
+<li>In the <strong>Function code</strong> section, you can write your code directly in the inline editor or upload a .zip file containing your code and dependencies.</li>
+<li>For demonstration, here&rsquo;s a simple Node.js example that returns a &ldquo;Hello, World!&rdquo; message:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">handler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">event</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#e6db74">&#39;Hello, World!&#39;</span>),
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Configure Function Settings</strong>:</p>
+<ul>
+<li>Set up your function’s <strong>Handler</strong> (for example, <code>index.handler</code> for Node.js).</li>
+<li>Adjust <strong>Memory</strong> and <strong>Timeout</strong> settings as needed, depending on the requirements of your function.</li>
+</ul>
+</li>
+<li>
+<p><strong>Test Your Lambda Function</strong>:</p>
+<ul>
+<li>Click the <strong>Test</strong> button to create a test event. Provide a name for the test event and use the default event template.</li>
+<li>Click <strong>Create</strong> to save the test event and then <strong>Test</strong> to execute your Lambda function. Verify that the output matches your expectations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Save Your Function</strong>:</p>
+<ul>
+<li>Click <strong>Deploy</strong> to save your changes.</li>
+</ul>
+</li>
+</ol>
+<h4 id="main-content">Main Content</h4>
+<ol>
+<li><a href="/">Log in to the AWS Management Console</a></li>
+<li><a href="/">Navigate to the Lambda Service</a></li>
+<li><a href="/">Create a New Lambda Function</a></li>
+<li><a href="/">Write or Upload Your Code</a></li>
+<li>[Configure Function Se</li>
+</ol>
+
+
+
 
 
 <footer class=" footline" >
@@ -429,6 +529,23 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -515,6 +632,8 @@
 
 	 
 	 
+		
+			<a class="nav nav-prev" href="/" title="Setting up an AWS account"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/1-create-lambda-function/" title="CREATING A LAMBDA FUNCTION" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -527,19 +646,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725314085"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725314085"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725314085"></script>
-    <script src="/js/jquery.sticky.js?1725314085"></script>
-    <script src="/js/featherlight.min.js?1725314085"></script>
-    <script src="/js/highlight.pack.js?1725314085"></script>
+    <script src="/js/clipboard.min.js?1725309418"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725309418"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725309418"></script>
+    <script src="/js/jquery.sticky.js?1725309418"></script>
+    <script src="/js/featherlight.min.js?1725309418"></script>
+    <script src="/js/highlight.pack.js?1725309418"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725314085"></script>
-    <script src="/js/learn.js?1725314085"></script>
-    <script src="/js/hugo-learn.js?1725314085"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725309418"></script>
+    <script src="/js/learn.js?1725309418"></script>
+    <script src="/js/hugo-learn.js?1725309418"></script>
 
-    <link href="/mermaid/mermaid.css?1725314085" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725314085"></script>
+    <link href="/mermaid/mermaid.css?1725309418" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725309418"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
